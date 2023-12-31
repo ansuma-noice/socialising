@@ -17,7 +17,7 @@ const ProfilePage = () => {
 
     const getUser = async () => {
         const response = await fetch(
-            `http://localhost:3001/users/${userId}`, {
+            `https://social-appo.onrender.com/users/${userId}`, {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
         }
