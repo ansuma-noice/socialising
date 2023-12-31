@@ -18,6 +18,10 @@ import {
 import storage from "redux-persist/lib/storage";
 import {PersistGate} from "redux-persist/integration/react";
 
+import { disableReactDevTools } from '@fvilers/disable-react-devtools';
+
+if(process.env.NODE_ENV=== 'production') disableReactDevTools();
+
 const persistConfig={key:"root",// The key for the persisted data in storage
                      storage, // The storage mechanism to be used (e.g., localStorage, AsyncStorage)
                      version:1};// Version number for potential migrations in the future
